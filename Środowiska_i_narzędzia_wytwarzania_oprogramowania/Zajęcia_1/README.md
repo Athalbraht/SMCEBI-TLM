@@ -106,7 +106,13 @@ wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 
 `1>` stdout, `2>` stderr
 
+#### Uruchamianie plikow wykonywalnych
 
+`./plik`
+
+lub
+
+`/ścieżka/plik`
 
 
 ### Kryptografia asymetryczna
@@ -125,7 +131,7 @@ wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 
 `gpg --full-generate-key`
 
-### Wyeksportuj do pliku ASCII (klucze prywatne --export-secret-keys)
+#### Wyeksportuj do pliku ASCII (klucze prywatne --export-secret-keys)
 
 `gpg --export --armor ID_LUB_MAIL >> plik.asc`
 
@@ -139,7 +145,7 @@ wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 - [VirtualBox](https://www.virtualbox.org/)
 - [Multiplexer terminala - TMUX](https://linuxize.com/post/getting-started-with-tmux/)
 - Manager plików CLI - [ranger](https://github.com/ranger/ranger), [mc](https://www.linuxcommand.org/lc3_adv_mc.php)
-
+- Powłoki systemu np.: [bash](https://pl.m.wikipedia.org/wiki/Bash)(domyślna dla większości dystrybucji systemów Linux), [zsh](https://en.m.wikipedia.org/wiki/Z_shell) i jej plugin [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ---
 
@@ -150,5 +156,10 @@ wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 	- dodaj gwiazdkę lub wyślij swoj nick mailowo
 
 ![git_star](../.pictures/git_star.png)
+
+
+2. **dla chętnych**
+	- naucz się obslugi managerów plików CLI np. ranger, mc. 
+	- jak uruchomić okienkowy edytor plików mając dostęp do serwera tylko po SSH.
 
 ---
