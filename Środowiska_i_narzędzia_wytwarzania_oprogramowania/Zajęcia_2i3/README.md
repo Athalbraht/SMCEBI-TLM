@@ -232,6 +232,15 @@ venv/ #ignoruje katalog venv
 Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowane pliki istnieją już w poprzednich commitach, zablokujemy jedynie ich aktualizację.
 
 
+#### Wysyłanie tagów
+
+Tagi są domyślnie lokalne, aby je wysłać na repozytorium zdalne należy wykonać polecenie:
+
+```bash
+$: git push ALIAS --tags
+```
+
+
 
 ### Gałęzie
 
@@ -247,10 +256,10 @@ $: git checkout NAZWA_GALEZI # przełączanie
 lub
 
 ```bash
-$: git checkout -b NAZWA_GALEZI # stwórz  przełączanie
+$: git checkout -b NAZWA_GALEZI # stwórz i przełącz
 ```
 
-#### Wysyłanie zmiana
+#### Wysyłanie zmian
 
 gałąź staje się zdalna
 
