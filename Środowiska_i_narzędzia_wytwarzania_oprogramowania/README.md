@@ -10,8 +10,8 @@
 ### TEMATY
 
 1. [Podstawowe polecenia. Dystrybucje Linux](Zajęcia_1/README.md)
-2. [GIT: Konfiguracja i podstawowe funkcje](Zajęcia_2/README.md)
-3. [GIT: Praca z repozytoriami. Wprowadzenie: gałęzie projektu (zadanie)](Zajęcia_3/README.md)
+2. [GIT: Konfiguracja i podstawowe funkcje. Praca z repozytoriami. Wprowadzenie: gałęzie projektu (zadanie)](Zajęcia_2i3/README.md)
+3. [GIT: Konfiguracja i podstawowe funkcje. Praca z repozytoriami. Wprowadzenie: gałęzie projektu (zadanie)](Zajęcia_2i3/README.md)
 4. [GIT: Dodatkowe funkcje, Praca w dużym zespole (zadanie)](Zajęcia_4/README.md)
 5. [GIT: Podsumowanie](Zajęcia_5/README.md)
 6. [GIT: BCK (zadanie)](Zajęcia_6/README.md)

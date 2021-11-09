@@ -157,10 +157,10 @@ Puste repozytorium zdalne można zainicjować ręcznie na np. GitHubie, jak rów
 $: mkdir myRemoteRepo.git
 $: cd myRemoteRepo.git
 $: git init --bare
-``` 
+```
 
 ```bash
-$: git clone ssh://login@adress:PORT/<path>/myRemoteRepo.git 
+$: git clone ssh://login@adress:PORT/<path>/myRemoteRepo.git
 ```
 
 
@@ -231,6 +231,52 @@ venv/ #ignoruje katalog venv
 
 Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowane pliki istnieją już w poprzednich commitach, zablokujemy jedynie ich aktualizację.
 
+
+
+### Gałęzie
+
+#### Inicjalizacja nowej gałęzie
+
+UWAGA: gałęzie tworzone są tylko lokalnie
+
+```bash
+$: git branch NAZWA_GALEZI # tworzy gałąź
+$: git checkout NAZWA_GALEZI # przełączanie
+```
+
+lub
+
+```bash
+$: git checkout -b NAZWA_GALEZI # stwórz  przełączanie
+```
+
+#### Wysyłanie zmiana
+
+gałąź staje się zdalna
+
+```bash
+$: git push ALIAS NAZWA_GALEZI
+```
+
+#### Inne
+
+```bash
+$: git branch #pokaż Gałęzie
+```
+
+#### Scalanie zmian
+
+Mamy zmiany w gałęzi DEV, chcemy je scalić z kodem znajdującym się w gałęzi master:
+
+```bash
+$: git checkout master #przełączanie na gałąź master
+$: git merge DEV #scalanie zmian (może powstać konflikt - naprawiamy i commitujemy zmiany z INDEXu)
+$: git push origin master #opcjonalnie wysyłamy na repo zdalne
+```
+
+
+
+
 ---
 
 
@@ -239,20 +285,26 @@ Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowan
 
 - `$: git help core-tutorial`
 - Inne narzędzia kontroli wersji oprogramowania: SVN, CVS, Mercurial, RCS...
--
+- natywne wsparcie git przez IDE
+- nakładki graficzne np **gitk**
+- tworzenie własnego serwera z użyciem gitlab, cgit ...
 
 ---
 
 ## Zadania
 
 - 1ptk
-	1. Zainicjuj repozytorium dla dowolnie wybranego przez siebie programu (najlepiej powiązanego z umiejętnościami/zainteresowaniami, na podstawie, którego stworzone zostaną tematy projektów)
+	1. Zainicjuj repozytorium dla dowolnie wybranego przez siebie programu (najlepiej powiązanego z umiejętnościami/zainteresowaniami, na podstawie, którego stworzone zostaną tematy projektów). Git powinien być poprawnie skonfigurowany, aby github poprawnie identyfikował [tożsamość](#Konfiguracja-środowiska). Jeśli posiadasz już repozytorium upewnij się tylko czy spełnione są pozostałe punkty.
 	2. Dodaj commit inicjujący np. "My first commit"
-	3. Dodaj plik README.md (markdown) z nazwą i krótkim opisem czego dotyczy program. Zatwierdź zmiany z podpisem GPG
-	4. Dodaj plik `.gitignore` z co najmniej 1 wpisem dla niechcianych plików typowych dla danego języka. Zatwierdź bez podpisu GPG.
-	5. Wyślij zmiany do repozytorium zdalnego (Organizacja SMCEBI-didactics). Jeśli nie chcesz, aby program był publiczny, dodaj go na własnym koncie w repozytorium prywatnym i dodaj użytkownika **aszadzinski** jako kontrybutor.
+	3. Dodaj plik README.md (markdown) z nazwą i krótkim opisem czego dotyczy program. Dodaj commit.
+	4. Dodaj plik `.gitignore` z co najmniej 1 wpisem dla niechcianych plików typowych dla danego języka. Dodaj commit podpisany kluczem GPG.
+	5. Wyślij zmiany do repozytorium zdalnego. Jeśli nie chcesz, aby program był publiczny, dodaj go na własnym koncie w repozytorium prywatnym i dodaj użytkownika **aszadzinski** jako kontrybutor.
 	6. Dodaj plik `LICENSE` z poziomu interfejsu githuba.
-	7. Zaktualizuj swoje repozytorium lokalne o ten plik 
-	8. Poczytaj o szkole pracy z oprogramowaniem GIT-FLOW
+	7. Zaktualizuj swoje repozytorium lokalne o ten plik.
+	8. Stwórz gałąź np. dev i dodaj w niej plik np. CHANGELOG z treścią. Spraw, aby gałąź była widoczna z poziomu repozytorium zdalnego.
+	9. W gałęzi głównej stwórz ten sam plik z inną treścią, zacommituj i dodaj zmiany z gałęzi stworzonej wcześniej (dev). Wyślij wszystkie zmiany do repozytorium zdalnego.
+	10. Otaguj ostatni commit o wersję np. v1.0 i wyślij tagi do repo zdalnego.
+	11. Jeśli nie chcesz, dodawać zmian w swojej gałęzi głównej, wyodrębnij z niej gałąź *semi-master* i traktuj jako główna (tzn. z niej wyodrębniaj inne gałęzie i w nią scalaj zmiany, po zajęciach możesz ją usunąć).
+- Poczytaj o szkole pracy z oprogramowaniem GIT-FLOW
 
 ---
