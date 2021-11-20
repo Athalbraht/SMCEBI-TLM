@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ $1 = "-v" ]]
+then
+	echo "`whoami`: Exectued with v flag"
+else
+	echo "`whoami`: Missing v flag"
+
+fi
+
+if [[ $2 = "-f" ]]
+then 
+	echo "`whoami`: Exectued with f flag"
+fi
