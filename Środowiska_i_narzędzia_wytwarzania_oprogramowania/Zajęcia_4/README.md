@@ -62,7 +62,7 @@ $: sudo docker POLECENIE
 		- pobierz do katalogu `/root/` [plik](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/tmp/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/Zaj%C4%99cia_4/runme)
 		- dodaj uprawnienia pozwalające na wykonanie pobranego programu `runme` (polecenie `chmod +x PLIK`)
 		- używając `ENTRYPOINT` wykonaj pobrany program `runme` z flagą `-v` oraz możliwością dawania własnych przez polecenie `docker run OBRAZ -dodatkowe_flagi`
-	5. Zbuduj obraz tagując go jako: `zadanie4-NAZWISKO:v1.0` i uruchom go w katalogu gdzie znajduje się  `Dockerfile` z przekierowaniem wyjścia do pliku `output1.txt` i `output2.txt` (z flagą `-v` oraz z flagami `-v`, `-t`)
+	5. Zbuduj obraz tagując go jako: `zadanie4-NAZWISKO:v1.0` (podpowiedź: skopiuj plik .bashrc do miejsca z którego budujesz obraz) i uruchom go w folderze gdzie znajduje się  `Dockerfile` z przekierowaniem wyjścia do pliku `output1.txt` i `output2.txt` (z flagą `-v` oraz z flagami `-v`, `-f`). `sudo docker run OBRAZ >> OUTPUT_FILE`
 	6. Zatwierdź zmiany oraz wyślij do repozytorium zdalnego (do gałęzi dev-TWOJLOGIN)
 	7. otaguj commit v1.0-TWOJLOGIN i wyślij tagi do repo zdalnego
 	7. Wykonaj pull request do gałęzi `main` z poziomu githuba
