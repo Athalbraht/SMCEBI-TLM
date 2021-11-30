@@ -183,6 +183,6 @@ $: sudo docker pull alias/repo:tagname
 
 ## Zadania
 
-
+VyB0eW0gdHlnb2RuaXUgYnJhayA=
 
 ---
