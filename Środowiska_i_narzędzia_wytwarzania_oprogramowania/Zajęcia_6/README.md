@@ -1,4 +1,4 @@
-# Zajęcia 1
+# Zajęcia 6
 
 ---
 
@@ -11,7 +11,7 @@
 
 ### docker-compose
 
-Narzędzie do uruchamiania wielo-kontenerowych aplikacji.
+Narzędzie do uruchamiania wielokontenerowych aplikacji.
 
 Podobnie jak w przypadku uruchamiania pojedynczego kontenera w katalogu roboczym musi znajdować się plik `docker-compose.yml`.  Uruchomienie następuje przez polecenie:
 
@@ -68,27 +68,9 @@ $: sudo docker run -p 3307:3306 -n my-net -v /home/user/db/:/data/ -e USER=admin
 
 ---
 
-## Zadania 1ptk
+## Zadania
 
-- Popraw plik Dockerfile znajdujący się w repozytorium 
-	- użyj opcji FORK
-	- w ramach własnego zforkowanego repozytorium stwórz folder (twoje nazwisko) i skopiuj zawartość folderu *do poprawy*
-	- Popraw błąd w pliku Dockerfile i zmodyfikuj index.html zgodnie z zawartością
-	- zbuduj obraz o nazwie z6-TWOJENAZWISKO
-	- Zawierdź i wyślij zmiany
-- Stwórz aplikację przy pomocy docker-compose:
-	- opartą na 3 obrazach: mariadb, adminer, z6-TWOJENAZWISKO
-	- kontenery podłączone są do sieci net-TWOJENAZWSKO
-	- mariadb oraz z6-TWOJENAZWISKO mają wspólny volumen vol-TWOJENAZWISKO zamontowany w /data/
-	- Aplikacja posiada wystawione porty dla z6-TWOJENAZWISKO (80X8 <- 5000) i adminera (81X8 <- 8080) (Uzyj dwóch portów przydzielonych ci podczas zajęć)
-	- Uruchom aplikację 
-	- Zatwierdź i wyślij zmiany
-
-
-
-
-
-
+TmllIFR5bSBSYXplbQo=
 
 
 ---

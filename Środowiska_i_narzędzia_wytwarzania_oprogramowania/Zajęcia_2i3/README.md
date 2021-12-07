@@ -1,4 +1,4 @@
-# Zajęcia 1
+# Zajęcia 2 i 3
 
 ---
 
