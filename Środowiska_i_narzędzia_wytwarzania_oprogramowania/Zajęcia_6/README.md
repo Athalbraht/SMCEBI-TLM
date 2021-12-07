@@ -15,8 +15,8 @@ Narzędzie do uruchamiania wielokontenerowych aplikacji.
 
 Podobnie jak w przypadku uruchamiania pojedynczego kontenera w katalogu roboczym musi znajdować się plik `docker-compose.yml`.  Uruchomienie następuje przez polecenie:
 
-```bash
-$: sudo docker-compose up # -d aby odczepić sesje 
+```console
+user@host:~$ sudo docker-compose up # -d aby odczepić sesje 
 ```
 
 W przypadku braku zdefiniowanych nazw kontenerów następuje ich  automatyczne przypisanie zgodnie z wzorem _katalog-obraz-nr_.

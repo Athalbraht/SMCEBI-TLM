@@ -16,91 +16,153 @@
 
 połączenie z komputerem `<adres_hosta>` jako użytkownik `<nazwa-użytkownika>`
 
-`$: ssh nazwa-użytkownika@adres-hosta -p PORT`
+
+```console
+user@host:~$ ssh nazwa-użytkownika@adres-hosta -p PORT
+
+```
 
 generowanie kluczy ssh:
 
-`$: ssh-keygen -b ILE_BITOW`
+
+```console
+user@host:~$ ssh-keygen -b ILE_BITOW
+
+```
 
 zapisane w `~/.ssh/id_rsa*`
 
 
 #### Wejście do katalogu
 
-`$: cd KATALOG`
+
+```console
+user@host:~$ cd KATALOG
+
+```
 
 skróty: `.` aktualny katalog, `~` katalog domowy, `..` katalog wyżej
 
 #### Aktualna ścieżka
 
-`$: pwd`
+
+```console
+user@host:~$ pwd
+
+```
 
 #### Pokaż pliki
 
-`$: ls`
+
+```console
+user@host:~$ ls
+
+```
 
 Najczęstsze argumenty: `-l` szczegóły, `-a` pokaż ukryte katalogi
 
 #### Nowy katalog
 
-`$: mkdir NAZWA_KATALOGU`
+
+```console
+user@host:~$ mkdir NAZWA_KATALOGU
+
+```
 
 #### Kopiuj, przenieś, usuń
 
-`$: cp CO GDZIE`
 
-`$: mv CO GDZIE`
+```console
+user@host:~$ cp CO GDZIE
 
-`$: rm PLIK_DO_USUNIĘCIA`
+```
+
+
+```console
+user@host:~$ mv CO GDZIE
+
+```
+
+
+```console
+user@host:~$ rm PLIK_DO_USUNIĘCIA
+
+```
 
 Najczęstsze argumenty: `-r` rekursywnie, `-f` wymuś
 
 #### Pokaż dokumentacje
 
-`$: man POLECENIE`
+
+```console
+user@host:~$ man POLECENIE
+```
 
 #### Szukaj
 
-`$: find GDZIE -parametr "WYRAŻENIE"`
+
+```console
+user@host:~$ find GDZIE -parametr "WYRAŻENIE"
+```
 
 `-parametr`: np. `-name` nazwa pliku, `-iname` ignoruj wielkość liter itp.
 
 #### Zmiana uprawnień
 
-`$: chmod WŁAŚCICIEL|GRUPA|INNI PLIK`
 
-np. `$: chmod 764 plik.txt`
+```console
+user@host:~$ chmod WŁAŚCICIEL|GRUPA|INNI PLIK
+```
+
+np. `user@host:~$ chmod 764 plik.txt`
 
 `1`- wykonanie, `2` odczyt, `4` zapis
 
 zmiana właściciela:
 
-`$: chown KTO PLIK`
+
+```console
+user@host:~$ chown KTO PLIK
+```
 
 zmiana grupy:
 
-`$: chgrp GRUPA PLIK`
+
+```console
+user@host:~$ chgrp GRUPA PLIK
+```
 
 #### Przykładowe edytory tekstu
 
-`$: nano`
-`$: vim #jak wyjść z vim'a: ESC :q!`
+
+```console
+user@host:~$ nano
+user@host:~$ vim #jak wyjść z vim'a: ESC :q!
+```
 
 #### Pokaż zawartość pliku
 
-`$: cat PLIK`
 
-`$: less PLIK`
+```console
+user@host:~$ cat PLIK
+user@host:~$ less PLIK
+```
 
 #### Strumienie
 
 np. poszukaj "wyrażenie" w pliku file.txt
 
-`$: cat file.txt  | grep "wyrażenie"`
+
+```console
+user@host:~$ cat file.txt  | grep "wyrażenie"
+```
 
 #### [Przekierowania](https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean#)
 
-`$: ls > plik.txt`
+
+```console
+user@host:~$ ls > plik.txt
+```
 
 wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 
@@ -108,11 +170,17 @@ wyjście polecenia `ls` zapisane w `plik.txt`. `>` nadpisz, `>>` dopisz
 
 #### Uruchamianie plikow wykonywalnych
 
-`./plik`
+
+```console
+./plik
+```
 
 lub
 
-`/ścieżka/plik`
+
+```console
+/ścieżka/plik
+```
 
 
 ### Kryptografia asymetryczna
@@ -121,19 +189,31 @@ lub
 
 #### Pokaż klucze publiczne
 
-`$ gpg --list-keys`
+
+```console
+user@host:~$ gpg --list-keys
+```
 
 #### Pokaż klucze publiczne
 
-`$ gpg --list-secret-keys`
+
+```console
+user@host:~$ gpg --list-secret-keys
+```
 
 #### Wygeneruj klucze
 
-`gpg --full-generate-key`
+
+```console
+user@host:~$ gpg --full-generate-key
+```
 
 #### Wyeksportuj do pliku ASCII (klucze prywatne --export-secret-keys)
 
-`gpg --export --armor ID_LUB_MAIL >> plik.asc`
+
+```console
+user@host:~$ gpg --export --armor ID_LUB_MAIL >> plik.asc
+```
 
 ---
 
@@ -145,7 +225,7 @@ lub
 - [VirtualBox](https://www.virtualbox.org/)
 - [Multiplexer terminala - TMUX](https://linuxize.com/post/getting-started-with-tmux/)
 - Manager plików CLI - [ranger](https://github.com/ranger/ranger), [mc](https://www.linuxcommand.org/lc3_adv_mc.php)
-- Powłoki systemu np.: [bash](https://pl.m.wikipedia.org/wiki/Bash)(domyślna dla większości dystrybucji systemów Linux), [zsh](https://en.m.wikipedia.org/wiki/Z_shell) i jej plugin [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- Powłoki systemu np.: [console](https://pl.m.wikipedia.org/wiki/Bash)(domyślna dla większości dystrybucji systemów Linux), [zsh](https://en.m.wikipedia.org/wiki/Z_shell) i jej plugin [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ---
 

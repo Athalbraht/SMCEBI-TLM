@@ -15,8 +15,8 @@
 
 #### Konfiguracja środowiska
 
-```bash
-$: git config PARAMS ARGS
+```console
+user@host:~$ git config PARAMS ARGS
 ```
 
 **PARAMS** np.:
@@ -31,10 +31,10 @@ Dane powinny pokrywać się z tymi podanymi na hostingach np. GitHub
 
 #### Inicjalizacja repozytorium lokalnego w folderze mylocalrepo/
 
-```bash
-$: cd mylocalrepo/
-$: git init
-$: git config --local user.name aszadzinski #jeśli nie skonfigurowanie dla --global
+```console
+user@host:~$ cd mylocalrepo/
+user@host:~$ git init
+user@host:~$ git config --local user.name aszadzinski #jeśli nie skonfigurowanie dla --global
 ...
 ```
 
@@ -43,17 +43,17 @@ stworzony zostaje katalog `.git/`.
 
 #### Śledzenie zmian
 
-```bash
-$: echo "print('spam eggs')" > main.py
-$: git status #zwraca informacje o pliku main.py nie dodanym do indexu
-$: git add main.py #opcjonalnie . - dodaj cały katalog, -A/--all dodaj wszystko
-$: git status # informacja o śledzeniu pliku main.py i oczekiwaniu na commit
+```console
+user@host:~$ echo "print('spam eggs')" > main.py
+user@host:~$ git status #zwraca informacje o pliku main.py nie dodanym do indexu
+user@host:~$ git add main.py #opcjonalnie . - dodaj cały katalog, -A/--all dodaj wszystko
+user@host:~$ git status # informacja o śledzeniu pliku main.py i oczekiwaniu na commit
 ```
 
 #### Zatwierdzanie zmian (commit)
 
-```bash
-$: git commit -m "My first commit" #brak opcji -m otworzy edytor z $EDITOR
+```console
+user@host:~$ git commit -m "My first commit" #brak opcji -m otworzy edytor z $EDITOR
 ```
 
 W celu podpisania kluczem GPG dodajemy opcje `-S`
@@ -61,16 +61,16 @@ W celu podpisania kluczem GPG dodajemy opcje `-S`
 
 #### Dodatkowe polecenia
 
-```bash
-$: git log #pokaż historie zmian (w programie less)
-$: git tag #pokaż tagi
-$: git branch #pokaż lokalne gałęzie
+```console
+user@host:~$ git log #pokaż historie zmian (w programie less)
+user@host:~$ git tag #pokaż tagi
+user@host:~$ git branch #pokaż lokalne gałęzie
 ```
 
 #### Historia zmian
 
-```bash
-$: git log
+```console
+user@host:~$ git log
 ```
 
 ```
@@ -89,22 +89,22 @@ Date:   Thu Oct 28 08:14:18 2021 +0200
 
 Każdy commit identyfikowany jest przez hash, w celu cofnięcia się do poprzedniego stanu należy użyć polecenia `checkout`
 
-```bash
-$: git checkout cd75575 #nie trzeba podawać pełnego identyfikatora
-$: git checkout master #powrót do wersji aktualnej (gałęzi master)
+```console
+user@host:~$ git checkout cd75575 #nie trzeba podawać pełnego identyfikatora
+user@host:~$ git checkout master #powrót do wersji aktualnej (gałęzi master)
 ```
 
 #### Tagowanie
 
-```bash
-$: git tag v1.0
+```console
+user@host:~$ git tag v1.0
 ```
 
 Każdy commit można tagować, dzięki czemu nie trzeba odwoływać się do zmian przez hash `$ git checkout v1.0` (tagi domyślnie są lokalne).
 
 #### Pokaż różnice między commitami
 
-```bash
+```console
 git diff <ID_COMMIT> #przydatne z --word-diff jeśli różnice istnieją w tej samej linii
 
 ```
@@ -113,21 +113,21 @@ git diff <ID_COMMIT> #przydatne z --word-diff jeśli różnice istnieją w tej s
 
 Np. w celu dopisania zmian do istniejącego commita, zamiast tworzenie nowego można użyć:
 
-```bash
-$: git add .
-$: git commit --amend #dodaje zmiany z indexu do ostatniego commita, można użyć z innymi opcjami np. -S
+```console
+user@host:~$ git add .
+user@host:~$ git commit --amend #dodaje zmiany z indexu do ostatniego commita, można użyć z innymi opcjami np. -S
 ```
 
 #### Odzyskiwanie stanu pojedynczego pliku
 
-```bash
-$: git restore PLIK --source COMMIT/TAG
+```console
+user@host:~$ git restore PLIK --source COMMIT/TAG
 ```
 
 #### Reset repozytorium
 
-```bash
-$: git reset --hard REPO/BRANCH...
+```console
+user@host:~$ git reset --hard REPO/BRANCH...
 ```
 **Uwaga** Dane dodane do indeksu przepadają
 
@@ -138,29 +138,29 @@ $: git reset --hard REPO/BRANCH...
 
 #### Pobieranie z repozytorium zdalnego (klonowanie)
 
-```bash
-$: git clone LINK
+```console
+user@host:~$ git clone LINK
 ```
 
 Najczęściej używane
 
 - protokół http, np. `$ git clone https://github.com/aszadzinski/SMCEBI-TLM.git`
-- protokół SSH, np. `$: git clone git@github.com:aszadzinski/SMCEBI-TLM.git`
-- repozytorium "zdalne" istnieje lokalnie, np.: `$: git clone <path>/SMCEBI.git`
+- protokół SSH, np. `user@host:~$ git clone git@github.com:aszadzinski/SMCEBI-TLM.git`
+- repozytorium "zdalne" istnieje lokalnie, np.: `user@host:~$ git clone <path>/SMCEBI.git`
 
 
 #### Tworzenie własnego repozytorium
 
 Puste repozytorium zdalne można zainicjować ręcznie na np. GitHubie, jak również ręcznie na np. własnym serwerze:
 
-```bash
-$: mkdir myRemoteRepo.git
-$: cd myRemoteRepo.git
-$: git init --bare
+```console
+user@host:~$ mkdir myRemoteRepo.git
+user@host:~$ cd myRemoteRepo.git
+user@host:~$ git init --bare
 ```
 
-```bash
-$: git clone ssh://login@adress:PORT/<path>/myRemoteRepo.git
+```console
+user@host:~$ git clone ssh://login@adress:PORT/<path>/myRemoteRepo.git
 ```
 
 
@@ -168,33 +168,33 @@ $: git clone ssh://login@adress:PORT/<path>/myRemoteRepo.git
 
 W przypadku sklonowanego repozytorium automatycznie ustawiony zostaje alias **origin**, w innym przypadku należy ustawić je ręcznie:
 
-```bash
-$: git init #w katalogu istnieją już jakieś pliki, a repozytorium zdalne jest puste
-$: git add . && git commit -m "first commit" #przykładowe migawka
-$: git remote -v #pokazuje linki do repozytoriów zdalnych (puste)
-$: git remote add remoteRepo https://github.com/aszadzinski/repo.git #dodanie adresu repozytorium pod nazwą `remoteRepo` #można dodać kilka
+```console
+user@host:~$ git init #w katalogu istnieją już jakieś pliki, a repozytorium zdalne jest puste
+user@host:~$ git add . && git commit -m "first commit" #przykładowe migawka
+user@host:~$ git remote -v #pokazuje linki do repozytoriów zdalnych (puste)
+user@host:~$ git remote add remoteRepo https://github.com/aszadzinski/repo.git #dodanie adresu repozytorium pod nazwą `remoteRepo` #można dodać kilka
 ```
 
 #### Wysyłanie zmian do repozytorium zdalnego
 
 W celu wysłania naszych zmian z repozytorium lokalnego do zdalnego, należy wykonać polecenie:
 
-```bash
-$: git push ALIAS BRANCH
+```console
+user@host:~$ git push ALIAS BRANCH
 ```
 
 np.:
 
-```bash
-$: git push origin master
+```console
+user@host:~$ git push origin master
 ```
 
 #### Aktualizacja repozytorium lokalnego
 
 W czasie, gdy modyfikujemy nasz kod lokalnie, na repozytorium zdalnym mogły pojawić się zmiany. Po wykonaniu polecenia `push`, git zwróci nam błąd o rozbieżnościach. Aby zaktualizować nasze repozytorium wykonujemy:
 
-```bash
-$: git pull origin master #ogólnie ... ALIAS BRANCH
+```console
+user@host:~$ git pull origin master #ogólnie ... ALIAS BRANCH
 ```
 
 W rzeczywistości jest to skrót. Git wykonuje dwa następujące po sobie polecenia `fetch` i `merge` (Szczegóły na następnych zajęciach przy pracy z gałęziami oprogramowania).
@@ -222,8 +222,8 @@ Chcemy, aby część plików w naszym katalogu roboczym nie była uwzględniana 
 
 Aby to osiągnąć możemy dodać plik `.gitignore`. Przykładowa postać:
 
-```bash
-$: cat .gitignore
+```console
+user@host:~$ cat .gitignore
 *.pyc #ignoruje wszystkie pliki z rozszerzeniem .pyc
 api.txt #ignoruje plik api.txt
 venv/ #ignoruje katalog venv
@@ -236,8 +236,8 @@ Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowan
 
 Tagi są domyślnie lokalne, aby je wysłać na repozytorium zdalne należy wykonać polecenie:
 
-```bash
-$: git push ALIAS --tags
+```console
+user@host:~$ git push ALIAS --tags
 ```
 
 
@@ -248,39 +248,39 @@ $: git push ALIAS --tags
 
 UWAGA: gałęzie tworzone są tylko lokalnie
 
-```bash
-$: git branch NAZWA_GALEZI # tworzy gałąź
-$: git checkout NAZWA_GALEZI # przełączanie
+```console
+user@host:~$ git branch NAZWA_GALEZI # tworzy gałąź
+user@host:~$ git checkout NAZWA_GALEZI # przełączanie
 ```
 
 lub
 
-```bash
-$: git checkout -b NAZWA_GALEZI # stwórz i przełącz
+```console
+user@host:~$ git checkout -b NAZWA_GALEZI # stwórz i przełącz
 ```
 
 #### Wysyłanie zmian
 
 gałąź staje się zdalna
 
-```bash
-$: git push ALIAS NAZWA_GALEZI
+```console
+user@host:~$ git push ALIAS NAZWA_GALEZI
 ```
 
 #### Inne
 
-```bash
-$: git branch #pokaż Gałęzie
+```console
+user@host:~$ git branch #pokaż Gałęzie
 ```
 
 #### Scalanie zmian
 
 Mamy zmiany w gałęzi DEV, chcemy je scalić z kodem znajdującym się w gałęzi master:
 
-```bash
-$: git checkout master #przełączanie na gałąź master
-$: git merge DEV #scalanie zmian (może powstać konflikt - naprawiamy i commitujemy zmiany z INDEXu)
-$: git push origin master #opcjonalnie wysyłamy na repo zdalne
+```console
+user@host:~$ git checkout master #przełączanie na gałąź master
+user@host:~$ git merge DEV #scalanie zmian (może powstać konflikt - naprawiamy i commitujemy zmiany z INDEXu)
+user@host:~$ git push origin master #opcjonalnie wysyłamy na repo zdalne
 ```
 
 
@@ -292,7 +292,7 @@ $: git push origin master #opcjonalnie wysyłamy na repo zdalne
 
 ## Warto doczytać
 
-- `$: git help core-tutorial`
+- `user@host:~$ git help core-tutorial`
 - Inne narzędzia kontroli wersji oprogramowania: SVN, CVS, Mercurial, RCS...
 - natywne wsparcie git przez IDE
 - nakładki graficzne np **gitk**

@@ -15,14 +15,14 @@ Użyte polecenia:
 
 ##### Uruchom POLECENIE jako administrator
 
-```bash
-$: sudo POLECENIE
+```console
+user@host:~$ sudo POLECENIE
 ```
 
 ##### Użyte polecenia: Docker
 
-```bash
-$: sudo docker POLECENIE
+```console
+user@host:~$ sudo docker POLECENIE
 ```
 
 - RUN tworzy kontener
@@ -57,12 +57,12 @@ $: sudo docker POLECENIE
 	5. Dodaj alias repozytroium zdalnego `git@github.com:SMCEBI-didactics/SiNWO-261121.git` (Wymaga potwierdzenia zaproszeń wysłanych 19.10.21)
 	4. W gałęzi `dev-TWOJLOGIN` w folderze `/TWOJLOGIN` dodaj plik Dockerfile budujący obraz:
 		- bazujący na dystrybucji alpine w wersji 3.15. **FROM**
-		- używając managera pakietów [apk](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management) dodaj pakiet  `bash`, `wget`. **RUN**
-		- skopiuj lokalny plik `~/.bashrc` do katalogu `/root/`. **COPY**
+		- używając managera pakietów [apk](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management) dodaj pakiet  `console`, `wget`. **RUN**
+		- skopiuj lokalny plik `~/.consolerc` do katalogu `/root/`. **COPY**
 		- pobierz do katalogu `/root/` [plik](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/tmp/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/Zaj%C4%99cia_4/runme). **ADD/wget**
 		- dodaj uprawnienia pozwalające na wykonanie pobranego programu `runme` (polecenie `chmod +x PLIK`). **RUN**
 		- używając `ENTRYPOINT` wykonaj pobrany program `runme` z flagą `-v` oraz możliwością dawania własnych przez polecenie `docker run OBRAZ -dodatkowe_flagi`. **ENTRYPOINT**
-	5. Zbuduj obraz tagując go jako: `zadanie4-NAZWISKO:v1.0` (podpowiedź: skopiuj plik .bashrc do miejsca z którego budujesz obraz) i uruchom go w folderze gdzie znajduje się  `Dockerfile` z przekierowaniem wyjścia do pliku `output1.txt` i `output2.txt` (z flagą `-v` oraz z flagami `-v`, `-f`). `sudo docker run OBRAZ >> OUTPUT_FILE`
+	5. Zbuduj obraz tagując go jako: `zadanie4-NAZWISKO:v1.0` (podpowiedź: skopiuj plik .consolerc do miejsca z którego budujesz obraz) i uruchom go w folderze gdzie znajduje się  `Dockerfile` z przekierowaniem wyjścia do pliku `output1.txt` i `output2.txt` (z flagą `-v` oraz z flagami `-v`, `-f`). `sudo docker run OBRAZ >> OUTPUT_FILE`
 	6. Zatwierdź zmiany oraz wyślij do repozytorium zdalnego (do gałęzi dev-TWOJLOGIN)
 	7. otaguj commit v1.0-TWOJLOGIN i wyślij tagi do repo zdalnego
 	7. Wykonaj pull request do gałęzi `main` z poziomu githuba
