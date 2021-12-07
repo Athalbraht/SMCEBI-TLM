@@ -7,20 +7,20 @@
 
 ---
 
-### TEMATY
+### TEMATY zajęć
 
-1. [Podstawowe polecenia. Dystrybucje Linux](Zajęcia_1/README.md)
-2. [GIT: Konfiguracja i podstawowe funkcje. Praca z repozytoriami. Wprowadzenie: gałęzie projektu (zadanie)](Zajęcia_2i3/README.md)
-3. [GIT: Konfiguracja i podstawowe funkcje. Praca z repozytoriami. Wprowadzenie: gałęzie projektu (zadanie)](Zajęcia_2i3/README.md)
-4. [GIT: Dodatkowe funkcje, Praca w dużym zespole (zadanie)](Zajęcia_4/README.md)
-5. [GIT: Podsumowanie](Zajęcia_5/README.md)
-6. [GIT: BCK (zadanie)](Zajęcia_6/README.md)
-7. [CMAKE: Wprowadzenie: kompilacja, makefile](Zajęcia_7/README.md)
-8. [CMAKE: praca z cmake (zadanie)](Zajęcia_8/README.md)
-9. [DOXYGEN: automatyczna generacja dokumentacji, Wybrane IDE (zadanie)](Zajęcia_9/README.md)
-10. [DOCKER: Wprowadzenie: konteneryzacja, budowanie obrazu, podstawowe polecenia](Zajęcia_10/README.md)
-11. [DOCKER: Dodatkowe funkcje budowania obrazów, docker-compose (zadanie)](Zajęcia_11/README.md)
-12. [BCK](Zajęcia_12/README.md)
+1. [Podstawowe polecenia. Dystrybucje **GNU/Linux**](Zajęcia_1/README.md)
+2. [**GIT**: Konfiguracja i podstawowe funkcje](Zajęcia_2i3/README.md)
+3. [**GIT**: Gałęzie projektu](Zajęcia_2i3/README.md)
+4. [**GIT**: Git-Flow; **Docker**: Wstęp, Dockerfile](Zajęcia_4/README.md)
+5. [**GIT**: rebase; **Docker**: volumeny, sieci, zarządzanie kontenerami](Zajęcia_5/README.md)
+6. [**Docker**: docker-compose;](Zajęcia_6/README.md)
+7. [**Doxygen**: Budowanie dokumentacj: **CMAKE**: Kompilacja](Zajęcia_7/README.md)
+8. [**CMAKE**: ](Zajęcia_8/README.md)
+9. [**CMAKE**:](Zajęcia_9/README.md)
+10. [**Debugowanie** i **Testowanie** aplikacji](Zajęcia_10/README.md)
+11. [BCK](Zajęcia_11/README.md)
+12. [**Prezentacja projektów**: Ocena](Zajęcia_12/README.md)
 
 ---
 
@@ -35,7 +35,7 @@
 	- 4 zadania: **db+**
 	- 5 zadania: **bdb**
 - [tematy projektów](tematy_projektów.md)
-	- 3ptk, użycie podstawowych funkcjonalności git'a
+	- 3ptk, użycie podstawowych funkcjonalności git'a 
 	- 2ptk, praca z gałęziami projektu
 	- 2ptk, wykorzystanie dodatkowych narzędzi github'a, praca w zespole
 	- 3ptk, zbudowanie obrazu przy pomocy dockera

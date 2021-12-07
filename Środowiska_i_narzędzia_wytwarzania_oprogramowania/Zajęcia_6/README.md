@@ -44,8 +44,8 @@ services:
     networks:
       - my-net	
     environment:
-	- USER: admin
-	- PASSWD: changeme
+      - USER: admin
+      - PASSWD: changeme
     ports:
       - 3307:3306
     volumes:
@@ -59,11 +59,11 @@ volumes:
 
 Jest tożsame z poleceniami:
 
-```bash
-$: sudo docker network  create my-net
-$: sudo docker volume create my-vol
-$: sudo docker run  -p8080:80 -n my-net -v my-vol:/data/ -e VAR=foo -d --name myname MYIMAGE
-$: sudo docker run -p 3307:3306 -n my-net -v /home/user/db/:/data/ -e USER=admin -e PASSWD=changeme -d MYIMAGE-db
+```console
+user@host:~$ sudo docker network  create my-net
+user@host:~$ sudo docker volume create my-vol
+user@host:~$ sudo docker run  -p8080:80 -n my-net -v my-vol:/data/ -e VAR=foo -d --name myname MYIMAGE
+user@host:~$ sudo docker run -p 3307:3306 -n my-net -v /home/user/db/:/data/ -e USER=admin -e PASSWD=changeme -d MYIMAGE-db
 ```
 
 ---
