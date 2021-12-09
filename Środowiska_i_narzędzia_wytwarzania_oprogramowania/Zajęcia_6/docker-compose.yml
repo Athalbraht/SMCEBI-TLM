@@ -1,19 +1,22 @@
 version: "3"
 services: 
-  db:
+  db-as:
     image: mariadb
-    container_name: as_maria
+    #container_name: as_maria
     environment:
       - MARIADB_USER=admin
       - MARIADB_PASSWORD=changeme
       - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=mydb
     ports:
       - 3399:3306
+    volumes:
+      - /tmp/mysql:/var/lib/mysql  
 
-  adminer2:
+  adminer-as:
     image: adminer
     environment:
-      - ADMINER_DEFAULT_SERVER=mariadb
+      - ADMINER_DEFAULT_SERVER=db-as
     ports:
       - 8888:8080
 
