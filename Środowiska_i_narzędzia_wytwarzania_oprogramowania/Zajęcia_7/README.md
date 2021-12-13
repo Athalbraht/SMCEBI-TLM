@@ -37,7 +37,7 @@ user@host:~$ gen-dc #generuje plik Dockerfile
  ```
 8. Zatwierdź zmiany w gałęzi **main**.
 9. Wróć do gałęzi **dev**.
-11. Zmodyfikuj  plik **docker-compose.yml** (adminer(port 81X8) + mariadb) w celu dodania trzeciego kontenera bazującego na twoim obrazie **z7-TWÓJLOGIN**. Ustaw zmienne środowiskowe i parametry, aby pomyślnie nasłuchiwał na przydzielonym ci publicznym porcie (**80X8**). 
+11. Zmodyfikuj  plik **docker-compose.yml** (adminer(port 81X8) + mariadb) w celu dodania trzeciego kontenera bazującego na twoim obrazie **z7-TWÓJLOGIN**. Ustaw zmienne środowiskowe i porty, aby pomyślnie nasłuchiwał na przydzielonym ci publicznym porcie (**80X8**). Użyj zmiennych środowiskowych `FLASK_RUN_HOST=0.0.0.0`, `FLASK_RUN_PORT=80X8`, `FLASK_ENV=development`
 12. **Zatwierdź** zmiany i **wypchnij** gałąź do zdalnego repozytorium.
 13. Wykonaj **merge** z gałęzi **dev** do **main** (Użyj funkcji **rebase**, aby zmienić kolejność commitów), **wypchnij** zmiany do zdalnego repozytorium wraz z tagiem **v1.0-TWÓJLOGIN**.
 14. Z gałęzi **main** wyodrębnij i przełącz się na branch **dev-verify**.
