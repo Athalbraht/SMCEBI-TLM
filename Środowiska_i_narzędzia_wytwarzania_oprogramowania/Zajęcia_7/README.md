@@ -25,7 +25,7 @@
 5. Przełącz się na *gałąź główną*.
 6. W katalogu repozytorium (tam gdzie foldery WebApp i Verify) wykonaj polecenie:
 ```console
-user@host:~$ gen-dc
+user@host:~$ gen-dc #generuje plik Dockerfile
 ```
 7. Zmodyfikuj plik wygenerowany **Dockerfile**, aby uruchamiał aplikację *WebApp* (przeczytaj README.md) i zbuduj ją na *INF-VM* pod nazwą **z7-TWÓJLOGIN:1.0**
   - aplikacja powinna uruchamiać się prawidłowo dla:
@@ -52,7 +52,7 @@ user@host:~$ source venv/bin/activate
 ```
 18. Aktywuj środowisko.
 19. W wirtualnym środowisku zainstaluj wszystkie zależności programu (program pip)
-20. Wykonaj polecenie `(venv) user@host:~$ pip freeze > requirements.txt`.
+20. Wykonaj polecenie `(venv) user@host:~$ pip freeze > requirements.txt` w katalogu *Verify* (nadpisz istnejący requirements.txt).
 21. Zainstaluj moduł przy użyciu *setuptools* `sudo python3 setup install`. 
 22. Spraw aby folder *venv* oraz wygenerowane przy instalacji dodatkowe katalogi (pycache, dist, build, eggs itp.) nie były włączane do commita.
 22. W pliku `output.txt` zapisz *sól* oraz *hash* zwracany przez  *Verify* dla wejściowej zmiennej *TWÓJLOGIN* (użyj polecenia `verify` i przekierowania do pliku lub napisz skrypt `test.py` wywołujący funkcję i zapisujący do pliku).
