@@ -12,7 +12,7 @@
 
 - [Struktura modułów Python](https://docs.python.org/3/tutorial/modules.html)
 - [setuptools](https://www.youtube.com/watch?v=GaWs-LenLYE)
-- [Docstring](https://www.programiz.com/python-programming/docstrings)
+- [Docstring](https://www.datacamp.com/community/tutorials/docstrings-python)
 - [PYPI](https://pypi.org/)
 - [Virtualenv](https://pythonbasics.org/virtualenv/)
 
@@ -21,7 +21,7 @@
 1. Użyj opcji **fork** (github) na [repozytorium](https://github.com/SMCEBI-didactics/WebApp).
 ![fork](../.pictures/fork.png)
 2. W ramach własnego forkowanego repozytorium wyodrębnij i przełącz się na **gałąź dev**.
-3. Dla aplikacji **Verify** oraz **WebApp** stwórz opisy każdej funkcji (co robi, co przyjmuje, co zwraca) jako python **DocString** w preferowanym przez siebie formacie.
+3. Dla aplikacji **Verify** oraz **WebApp** stwórz opisy każdej funkcji (co robi, co przyjmuje, co zwraca) jako python **DocString** w preferowanym przez siebie formacie (preferowany SphinxStyle).
 4. Zatwierdź zmiany w gałęzi **dev**.
 5. Przełącz się na **gałąź główną main**.
 6. W katalogu repozytorium (tam gdzie foldery WebApp i Verify) **wykonaj polecenie:**
