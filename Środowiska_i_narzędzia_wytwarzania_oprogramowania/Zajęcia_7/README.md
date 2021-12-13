@@ -52,9 +52,9 @@ user@host:~$ source venv/bin/activate
 (venv) user@host:~$ deactivate
 ```
 18. **Aktywuj** środowisko.
-19. W wirtualnym środowisku zainstaluj wszystkie zależności programu (program **pip**)
+19. W wirtualnym środowisku zainstaluj wszystkie zależności programu **Verify**(program **pip**)
 20. Wykonaj **polecenie** `(venv) user@host:~$ pip freeze > requirements.txt` w katalogu *Verify* (nadpisz istniejący requirements.txt).
-21. Zainstaluj moduł przy użyciu **setuptools** `sudo python3 setup install`. 
+21. Zainstaluj moduł przy użyciu **setuptools** `python3 setup install`. 
 22. Spraw aby folder **venv** oraz wygenerowane przy instalacji dodatkowe katalogi (**pycache, dist, build, eggs itp.**) nie były włączane do commita.
 22. W pliku `output.txt` zapisz **sól** oraz **hash** zwracany przez  **Verify** dla wejściowej zmiennej **TWÓJLOGIN** (użyj polecenia `verify` i przekierowania do pliku lub napisz skrypt `test.py` wywołujący funkcję i zapisujący do pliku).
 23. Dezaktywuj wirtualne środowisko, **zatwierdź i wypchnij** zmiany do zdalnego repozytorium.
