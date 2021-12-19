@@ -21,7 +21,7 @@
 > W razie problemów z podpisem commitów `user@host:~$ git commit -S -m "opis"` wykonaj polecenie: `user@host:~$ fix-gpg`
 
 1. Użyj opcji **fork** (github) na [repozytorium](https://github.com/SMCEBI-didactics/WebApplication).
-![fork](../.pictures/fork.png)
+![fork](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/master/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/.pictures/fork.png)
 2. W ramach własnego forkowanego repozytorium wyodrębnij i przełącz się na **gałąź dev**.
 3. Dla aplikacji **Verify** oraz **WebApp** stwórz opisy każdej funkcji (co robi, co przyjmuje, co zwraca) jako python **DocString** w preferowanym przez siebie formacie (np. SphinxStyle, GoogleStyle itp.).
 4. Zatwierdź zmiany w gałęzi **dev** (Opisz: *"Dodano Docstring"*). Podpisz commit swoim kluczem *GPG* (podpisz wszystkie późniejsze commity) 
@@ -66,7 +66,7 @@ user@host:~$ source venv/bin/activate
 26. Wykonaj **merge** z **dev-verify** do **main**. Użyj funkcji **rebase**, aby zmienić kolejność commitów . Wypchnij zmiany do zdalnego repozytorium wraz z tagiem *v1.1-TWÓJLOGIN*. 
 27. Wykonaj **pull request** w źródłowym [repozytorium](https://github.com/SMCEBI-didactics/WebApplication) używając swojego forka.
 
-![pullrequest](../.pictures/fork-pr.png)
+![pullrequest](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/master/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/.pictures/fork-pr.png)
  
  
 ---

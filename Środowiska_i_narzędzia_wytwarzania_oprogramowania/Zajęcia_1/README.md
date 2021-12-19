@@ -235,7 +235,7 @@ user@host:~$ gpg --export --armor ID_LUB_MAIL >> plik.asc
 	- dodaj wygenerowane klucze GPG i SSH w ustawieniach swojego konta
 	- dodaj gwiazdkę lub wyślij swoj nick mailowo
 
-![git_star](../.pictures/git_star.png)
+![git_star](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/master/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/.pictures/git_star.png)
 
 
 2. **dla chętnych**

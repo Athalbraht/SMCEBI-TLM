@@ -28,12 +28,12 @@ user@host:~$ git checkout master
 user@host:~$ git merge dev
 ```
 
-![rebase_merge](../.pictures/rebase_merge.png)
+![rebase_fix](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/master/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/.pictures/rebase_merge.png)
 
 
 ### Jak naprawić niezagnieżdżone gałęzie (Zajęcia 4: Zadanie)
 
-![rebase_fix](../.pictures/merge_fix.png)
+![rebase_fix](https://raw.githubusercontent.com/aszadzinski/SMCEBI-TLM/master/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/.pictures/merge_fix.png)
 
 Dla gałęzi main mamy:
 
