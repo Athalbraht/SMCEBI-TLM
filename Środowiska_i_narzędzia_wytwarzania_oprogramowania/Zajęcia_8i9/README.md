@@ -51,6 +51,7 @@ sys.path.insert(0, os.path.abspath('WZGLĘDNA ŚCIEŻKA DO KODU'))
 - przełącz się na gałąź *dev-2-TWOJLOGIN*
 - stwórz plik makefile instalujący pakiet w wirtualnym środowisku  wraz z zależnością z requirements.txt, uruchamiający polecenie powłoki a następnie dezaktywujący środowisko wirtualne przez polecenie `make run`. [Materiał pomocniczy](https://www.youtube.com/watch?v=VCmWzYHh7Y8)
 - Dodaj możliwość wykonania `make clear` usuwającą katalog z środowiskiem wirtualnym. Zatwierdź zmiany (upewnij się, że nie wysyłasz katalogu z virtualenv, edytuj gitignore)
+- Stwórz Dockerfile uruchamiający polecenie powłoki `zadanie8-twojlogin` z użyciem napisanego *Makefile* (bazuj na obrazie ubuntu, zainstaluj niezbędne pakiety)
 - Wypchnij zmiany do *dev-2-TWOJLOGIN*
 - Na githubie wykonaj pull request gałęzi *dev-TWOJLOGIN*. Użyj panelu bocznego, aby podlinkować *issues*  (issue-TWOJEIMIE) oraz milestone (zadanie 8)
 - Otwórz sekcję z **Pull requests** i znajdź request od innego użytkownika (jeśli istnieje). Wykonaj code review z pozytywnym zatwierdzeniem zmian. 
