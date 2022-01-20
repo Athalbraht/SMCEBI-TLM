@@ -56,6 +56,31 @@ sys.path.insert(0, os.path.abspath('WZGLĘDNA ŚCIEŻKA DO KODU'))
 - Na githubie wykonaj **Pull request** z gałęzi *dev-TWOJLOGIN*. Użyj panelu bocznego, aby podlinkować *Issues*  (użyj issue-TWOJEIMIE) oraz *milestone* (zadanie 8)
 - Otwórz sekcję z **Pull requests** i znajdź request od innego użytkownika (jeśli istnieje). Wykonaj code review z pozytywnym zatwierdzeniem zmian. 
 
+**podpowiedź**: w przypadku problemow z uruchomieniem virtualenv przez makefile, stworz osobny skrypt tworzacy srodowisko, instalujacy program i wykonujacy zadanie8-twojlogin. Odwołaj sie do niego przez `source skrypt` w Makefile. Uwaga: make używa /bin/sh zamiast bash. dodaj `SHELL := /bin/bash` w Makefile, aby source zadziałał
+
+```bash
+#!/bin/bash
+
+#pamietaj o chmod +x skrypt
+
+virtualenv venv
+source venv/bin/activate
+pip install -r req...
+python setup-xxx.py install
+itd.
+```
+
+```make
+
+SHELL := /bin/bash
+
+run:
+    source skrypt
+
+clear:
+    commands
+
+```
 ### Tematy projektów
 
 [LINK](https://albert.szadzinski.pl/SMCEBI-TLM/%C5%9Arodowiska_i_narz%C4%99dzia_wytwarzania_oprogramowania/Zaliczenie/2021.html)
