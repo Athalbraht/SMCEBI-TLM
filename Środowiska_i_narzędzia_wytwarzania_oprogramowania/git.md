@@ -17,7 +17,7 @@
      * [gitignore](#gitignore)
      * [Inne](#Dodatkowe-polecenia)
   - [Praca z repozytorium zdalnym](#Repozytoria-zdalne)
-     * [Klonowanie](#Pobieranie-z-repozytorium-zdalnego-klonowanie)
+     * [Klonowanie](#Pobieranie-z-repozytorium-zdalnego)
      * [Repo na własnym serwerze](#Tworzenie-własnego-repozytorium)
      * [Dodawanie aliasów](#Linkowanie-repozytorium-lokalne-zdalne)
      * [Wysyłanie zmian](#Wysyłanie-zmian-do-repozytorium-zdalnego)
@@ -189,7 +189,9 @@ Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowan
 
 ## Repozytoria zdalne
 
-### Pobieranie z repozytorium zdalnego - klonowanie
+### Pobieranie z repozytorium zdalnego
+
+**Klonowanie**
 
 ```console
 user@host:~$ git clone LINK_do_Repo
