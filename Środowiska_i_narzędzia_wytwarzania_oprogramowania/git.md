@@ -7,7 +7,7 @@
   - [Praca na galęzi](#Praca-na-gałęzi)
      * [Inicjalizacja lokalnego repo](#Inicjalizacja-repozytorium-lokalnego-w-folderze-mylocalrepo)
      * [Śledzenie zmian](#Śledzenie-zmian)
-     * [Zatwierdzanie (commit)](#Zatwierdzanie-zmian-(commit))
+     * [Zatwierdzanie (commit)](#Zatwierdzanie-zmian-commit)
      * [Historia zmian](#Historia-zmian)
      * [Tagowanie](#Tagowanie)
      * [Różniece między commitami](#Pokaż-różnice-między-commitami)
@@ -17,7 +17,7 @@
      * [gitignore](#gitignore)
      * [Inne](#Dodatkowe-polecenia)
   - [Praca z repozytorium zdalnym](#Repozytoria-zdalne)
-     * [Klonowanie](#Pobieranie-z-repozytorium-zdalnego-(klonowanie))
+     * [Klonowanie](#Pobieranie-z-repozytorium-zdalnego-klonowanie)
      * [Repo na własnym serwerze](#Tworzenie-własnego-repozytorium)
      * [Dodawanie aliasów](#Linkowanie-repozytorium-lokalne-zdalne)
      * [Wysyłanie zmian](#Wysyłanie-zmian-do-repozytorium-zdalnego)
@@ -189,7 +189,7 @@ Uwaga: ignorowanie następuje po commicie z plikiem .gitignore, jeśli ignorowan
 
 ## Repozytoria zdalne
 
-### Pobieranie z repozytorium zdalnego (klonowanie)
+### Pobieranie z repozytorium zdalnego - klonowanie
 
 ```console
 user@host:~$ git clone LINK_do_Repo
