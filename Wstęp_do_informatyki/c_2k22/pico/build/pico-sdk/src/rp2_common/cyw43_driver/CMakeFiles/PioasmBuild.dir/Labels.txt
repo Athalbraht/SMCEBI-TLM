@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/home/albert/Projects/SMCEBI-TLM/Wstęp_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule

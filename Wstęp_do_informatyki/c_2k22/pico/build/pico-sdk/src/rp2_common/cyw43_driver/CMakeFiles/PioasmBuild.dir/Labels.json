@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule"
+		},
+		{
+			"file" : "/home/albert/Projects/SMCEBI-TLM/Wst\u0119p_do_informatyki/c_2k22/pico/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PioasmBuild"
+		],
+		"name" : "PioasmBuild"
+	}
+}
