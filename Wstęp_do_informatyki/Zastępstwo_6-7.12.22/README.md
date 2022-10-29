@@ -6,6 +6,7 @@
 - [Raspberry Pico](https://botland.com.pl/1262-raspberry-pi-pico) - płytka prototypowa z mikrokontrolerem *rp2040* od RaspberryPi, można programować w C/C++ lub Micro Pythonie.
 - [Termux](https://termux.dev/en/) - Emulator środowiska Linux na Androida (*Nie* wymaga roota). Możliwość instalacji programów przez APT (pkg install XXX).
 - [SSH-SecureShell]() - protokół komunikacyjny używany do bezpiecznego łączenia się z terminalem zdalnego komputera. Użycie `ssh nazwa_uzytkownika@adress`, Gdy port jest inny niż domyślny (22) można użyć z opcją `-p PORT`
+- Proste wyjaśnienie zasady działania bramek logicznych [Link](https://www.youtube.com/watch?v=QZwneRb-zqA) i pamięci flash [Link](https://www.youtube.com/watch?v=I0-izyq6q5s)
 
 ## Kompilacja
 
