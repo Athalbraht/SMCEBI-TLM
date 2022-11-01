@@ -18,3 +18,61 @@ Proces kompilacji można podzielić na 4 części:
 3. Asembleryzacja
 4. Linkowanie
 
+Załóżmy, że mamy 3 pliki: main.c, func.c oraz nagłówkowy func.h o zawartości:
+
+```C
+// Plik main.c
+#include <stdio.h> //standardowa biblioteka wejścia-wyjścia, zawiera m.in. funkcje printf(), scanf()
+#include "func.h" //napisany przez nas nagłówek z funkcją f(x,y)
+
+int main() //obowiązkowa główna funkcja wykonująca się zawsze jako pierwsza
+{
+		// deklaracja zmiennej "a" o typie liczby całkowitej z jednoczesnym przypisaniem wartości
+		int a=1;
+
+		// deklaracja "b" bez przypisania wartości. 
+		// Uwaga, w odróżnieniu od języków dynamicznych np. Python, 
+		// zmienne muszą być zadeklarowane przed ich użyciem tzn. nie można 
+		// umieścić w kodzie linii b=4; bez wcześniejszego int b;
+		double b,c;
+
+		// Wypisanie wartości zmiennej "a" na ekran. "%d" dla typu int, "%c" dla char, "%f" dla double itd.
+		printf("a = %d \n", a);
+
+		// 
+		printf("Podaj pierwsza liczbe:")
+		scan("%f", &b); //wczytuje 'b' podane przez użytkownika
+		printf("Podaj druga liczbę:")
+		scan("%f", &c);
+
+		// wywołanie funkcji f znajdującej się w func.c
+		printf("Wynik %f+%f to %f\n", b, c, f(b, c));
+
+		// zwrócenie (dowolnej) wartości przez funkcję główną == zakończenie działania programu
+		return 0;
+}
+```
+
+```C
+// Plik func.h
+
+int f(double x, double y): //ciało funkcji nie jest wymagane w pliku nagłówkowym (zawartość w func.c)
+
+```
+
+```C
+// Plik func.c
+
+// funkcja zwracająca sumę dwóch liczb zmiennoprzecinkowych,
+// zwracany typ to int dlatego nastąpi zaokrąglenie w dół
+int f(double x, double y) 
+{
+		return x+y;
+}
+```
+
+### Preprocessing
+
+Zakła
+
+## 
