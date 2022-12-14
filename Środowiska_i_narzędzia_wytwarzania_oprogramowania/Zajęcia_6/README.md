@@ -68,9 +68,3 @@ user@host:~$ sudo docker run -p 3307:3306 -n my-net -v /home/user/db/:/data/ -e 
 
 ---
 
-## Zadania
-
-TmllIFR5bSBSYXplbQo=
-
-
----
