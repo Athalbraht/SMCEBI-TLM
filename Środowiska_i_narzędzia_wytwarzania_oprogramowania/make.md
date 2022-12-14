@@ -13,7 +13,7 @@
 
 ---
 
-### Kompilacja
+## Kompilacja
 
 Stwórzmy proste drzewo projektu:
 
@@ -22,15 +22,16 @@ projekt
 ├── bin
 ├── include
 │   └── test.hpp
-├── main.cpp
+├── src/main.cpp
 └── src
     └── test.cpp
+    └── src/main.cpp
 ```
 
 W katalogu `include/` przechowujemy pliki nagłówkowe `.h/.hpp`, w `src/` ich źródła `.c/.cpp`. `main.cpp` zawiera funkcję główną `int main()`.
 
 ```c++
-// Plik main.cpp
+// Plik src/main.cpp
 #include <stdio.h> // biblioteka standardowa IO
 #include "test.hpp" // nagłówek z funkcją myfunc
 
@@ -63,7 +64,7 @@ int myfunc(int x, int y)
 Komentując linie `#include <test.hpp>` oraz `printf("a+b=%d\n", myfunc(3,4));` w pliku `main.cpp` program kompilujemy poleceniem:
 
 ```console
-user@host:~$ g++ main.cpp -o bin/myprogram # brak opcji -o stworzy plik wykonywalny a.out
+user@host:~$ g++ src/main.cpp -o bin/myprogram # brak opcji -o stworzy plik wykonywalny a.out
 user@host:~$ bin/myprogram
 > Funkcja main: a=10
 ```
@@ -72,7 +73,7 @@ Chcąc użyć nagłówka `test.hpp` i zawartej funkcji `myfunc` (po odkomentowan
 
 
 ```console
-user@host:~$ g++ main.cpp src/test.cpp -o bin/myprogram -I include/
+user@host:~$ g++ src/main.cpp src/test.cpp -o bin/myprogram -I include/
 user@host:~$ bin/myprogram
 > Funkcja main: a=10
 > Funkcja myfunc(3, 4)
@@ -95,22 +96,22 @@ Proces kompilacji można podzielić na 4 główne kroki:
 - Generowanie plikow obiektowych
 - Linkowanie
 
-#### Preprocessing
+### Preprocessing
 
 Zatrzymanie kompilatora na etapie preprocessingu odbywa się z opcją `-E`:
 
 ```console
-user@host:~$ g++ -E main.cpp -I include/ 
+user@host:~$ g++ -E src/main.cpp -I include/ 
 ```
 
 Na tym etapie kod źródłowy jest przetwarzany na potrzeby późniejszej kompilacji. Usuwane są komentarze, dołączane pliki nagłówkowe oraz sprawdzana jest analiza składniowa. Preprocessor rozpoznaje [dyrektywy](https://cpp-polska.pl/post/teoria-kompilacji-preprocessing) pozwalające modyfikować bezpośrednio kod źródłowy (makra preprocessora i pseudostałe).
 
-#### Kompilacja właściwa
+### Kompilacja właściwa
 
 Zatrzymanie kompilatora na tym etapie odbywa się z użyciem opcji `-S`. 
 
 ```console
-user@host:~$ g++ -s main.cpp -I include/  # utworzony zostanie plik main.s
+user@host:~$ g++ -s src/main.cpp -I include/  # utworzony zostanie plik main.s
 ```
 
 ```assembly
@@ -157,21 +158,21 @@ _Z6myfuncii:
 Kod zostaje przetłumaczony na język assemblera.
 
 
-#### Assembler
+### Assembler
 
 Kolejnym krokiem jest przetworzenie kodu assemblera na kod maszynowy. Tworzone zostają pliki obiektowe zbliżone wyglądem do plików wykonywalnych. Zatrzymanie procesora na tym etapie jest możliwe używając opcji `-c`
 
 ```console
-user@host:~$ g++ -c main.cpp -o bin/myprogram -I include/  # utworzony zostanie plik main.o
+user@host:~$ g++ -c src/main.cpp -o bin/myprogram -I include/  # utworzony zostanie plik main.o
 ```
 
-#### Linkowanie
+### Linkowanie
 
 Dla każdego pliku źródłowego tworzony jest odrębny plik obiektowy, następnie wszystkie łączone są przez Linker do pliku wykonywalnego. 
 
 ```console
-user@host:~$ g++ -c main.cpp -I include/	# utworzony zostanie plik main.o
-user@host:~$ g++ -c src/test.cpp			# utworzony zostanie plik test.o
+user@host:~$ g++ -c src/main.cpp -I include/	# utworzony zostanie plik main.o
+user@host:~$ g++ -c src/test.cpp				# utworzony zostanie plik test.o
 user@host:~$ g++ main.o test.o -o bin/myprogram # tworzy plik wykonywalny
 ```
 
@@ -180,7 +181,7 @@ Efektem procesu kompilacji mogą być:
 - pliki wykonywalne/obiektowe
 - biblioteki statyczne i dynamiczne
 
-### Make
+## Make
 
 Make jest programem do automatyzacji kompilacji i budowania projektu. Działanie polega na interpretowaniu plików `Makefile` zawierających wprowadzone przez użytkownika (lub automatycznie: CMAKE) instrukcje  i reguły. Najczęściej używany w programach napisanych w językach C/C++, ale również Pythonie czy X
 
@@ -188,10 +189,11 @@ Prosty plik może wyglądać następująco:
 
 ```Makefile
 main:
-		g++ main.cpp src/test.cpp -Iinclude -o bin/myprogram -Wall
+		g++ src/main.cpp src/test.cpp -Iinclude -o bin/myprogram -Wall
 clean:
 		rm bin/myprogram
 say:
+		echo "test"
 		echo "Halo"
 ```
 
@@ -205,18 +207,39 @@ Reguły można mieszać (polecenie `make` wywoła najpierw `say` potem skompiluj
 
 ```Make
 main: say
-		g++ main.cpp src/test.cpp -Iinclude -o bin/myprogram -Wall
+		g++ src/main.cpp src/test.cpp -Iinclude -o bin/myprogram -Wall
 ...
 ```
+`say` jest warunkiem wstępnym, by target `main` mógł zostać uruchomiony, Zamiast podawania konkretnej reguły można podać zestaw plików, które muszą istnieć w katalogu roboczym:
 
-#### Wartości domyślne
+```Makefile
+main: src/main.cpp 
+		g++ src/main.cpp src/test.cpp -Iinclude -o bin/myprogram -Wall
+```
+
+Brak pliku `main.cpp` zwróci błąd:
+
+```
+make: *** No rule to make target 'main.cpp', needed by 'main'.  Stop.
+```
+
+Pliki można podać w formie zmiennej:
+
+```Makefile
+a := file1 file2
+
+main: $(a)
+```
+
+### Wartości domyślne
 
 ```Makefile
 
 TEST?="TEST"
 
 say:
-		@echo "Halo ${TEST}"
+		echo "test"
+		@echo "Halo $(TEST)"
 # symbol @ blokuje wyświetlanie treści polecenia
 ```
 
@@ -228,14 +251,106 @@ user@host:~$ make say
 Halo ZMIANA
 ```
 
+### Domyślna powłoka
+
+Domyślną powłoką jest `/bin/sh`. Aby zmienić ją na bash dodajemy linię:
+
+```Makefile
+SHELL := /bin/bash
+```
+
+### Wildcard
+
+```Makefile
+SRC_DIR := src
+SRC := $(wildcard $(SRC_DIR)/*.cpp)
+
+hello:
+	@echo "$(SRC)"
+```
+
+`make` zwraca wszystkie pliki `cpp` w folderze `src/`
+
+### Zmienne automatyczne
+
+```Makefile
+
+all: file1 reg1
+		echo $@ #zwraca nazwę Targetu
+		echo $^ #zwraca warunki wstępne
+```
+
+### Często używane zmienne
 
 
+- `CC`: Kompiler C  
+- `CXX`: Kompiler C++
+- `CFLAGS`: Flagi dla kompilera C
+- `CXXFLAGS`: Flagi dla kompilera C++
+- `CPPFLAGS`: Flagi dla preprocesora
+- `LDFLAGS`: Flagi dla linkera
 
 
+### Kompilacja programu 
+
+```Makefile
+SHELL := /bin/bash
+
+CC := gcc
+
+PROGRAM_NAME := myprogram
+
+SRC_DIR := src
+OBJ_DIR := obj
+BIN_DIR := bin
+
+CFLAGS := -Wall -Wpedantic -Wextra 
+CPPFLAGS := -Iinclude
+
+SRC := $(wildcard $(SRC_DIR)/*.cpp)
+# Podmienia nazwy src/x.cpp na obj/x.o
+OBJECTS := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC))
+
+all: $(OBJECTS) | $(BIN_DIR)
+	
+	$(CC) $(CFLAGS) $^ -o $(BIN_DIR)/$(PROGRAM_NAME)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR) # | oznacza warunek wstępny nie wchodzący w regułę
+	# Stworz plik obiektowy
+	$(CC) -c $^ $(CFLAGS) $(CPPFLAGS) -o $@
+
+$(BIN_DIR) $(OBJ_DIR):
+	# stworz folder bin lub obj
+	@mkdir -p $@
+
+clean:
+	@rm -rf $(BIN_DIR)
+	@rm -rf $(OBJ_DIR)
+```
 
 
+## CMake 
 
 
+```cmake
+cmake_minimum_required(VERSION 3.10)
+project(myproject)
+include_directories(
+		${PROJECT_SOURCE_DIR}/include
+)
 
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Og -g")
 
+
+FILE(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+#set(SOURCES
+#		src/test.cpp
+#		src/main.cpp
+#		)
+
+add_executable(${CMAKE_PROJECT_NAME}
+		${SOURCES}
+)
+```
