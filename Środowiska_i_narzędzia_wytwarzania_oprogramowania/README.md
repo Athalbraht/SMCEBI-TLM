@@ -15,10 +15,10 @@
   - [Automatyczne tworzenie dokumentacji](docs.md)
   - [Linter, Typechecker, Testy](ci.md)
   - [Dystrybucja projektów PyPi](pypi.md)
-* Kompilacja
-  - [Proces kompilacji](https://github.com/aszadzinski/SMCEBI-TLM/tree/master/Wst%C4%99p_do_informatyki)
-  - [Make](make.md)
-  - [CMake](cmake.md)
+* [Kompilacja](make.md)
+  - Proces kompilacji
+  - Make
+  - CMake
 * VIM
   - [Podstawy](vim.md)
   - [Pluginy](vim_plugins.md)
