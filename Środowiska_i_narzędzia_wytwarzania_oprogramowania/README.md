@@ -8,10 +8,13 @@
   - [GitHub - Automatyzacja](gitub.md)
 * Konteneryzacja i wirtualizacja
   - [Docker](docker.md)
-* Python
+  - [Kubernetes](kubernetes.md)
+  - [Snap, Flatpak, AppImage](snap.md)
+* Python CI/CD
+  - [Profilowanie CPU/Pamięci, Debugger](debug.md)
   - [Automatyczne tworzenie dokumentacji](docs.md)
+  - [Linter, Typechecker, Testy](ci.md)
   - [Dystrybucja projektów PyPi](pypi.md)
-  - [Profilowanie CPU/Pamięci, Debugger, Linter, Testy](tests.md)
 * Kompilacja
   - [Proces kompilacji](https://github.com/aszadzinski/SMCEBI-TLM/tree/master/Wst%C4%99p_do_informatyki)
   - [Make](make.md)
