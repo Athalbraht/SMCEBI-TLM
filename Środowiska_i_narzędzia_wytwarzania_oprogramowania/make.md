@@ -355,3 +355,12 @@ add_executable(${CMAKE_PROJECT_NAME}
 		${SOURCES}
 )
 ```
+
+Użycie:
+
+```console
+user@host:~$ mkdir build
+user@host:~$ cd build 
+user@host:~$ cmake .. # Generuje plik Makefile
+user@host:~$ make
+```
